@@ -1,0 +1,451 @@
+# MIT License
+# 
+# Copyright (c) 2014 Steven Kowal 
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+# P-ROC Game Description file for Cirqus Voltair 
+
+PRGame:
+    machineType: wpc95 
+    numBalls: 4
+PRFlippers:
+    - lowerRightFlipper 
+    - lowerLeftFlipper 
+PRBumpers:
+    - leftSlingshot 
+    - rightSlingshot 
+    - upperJetBumper 
+    - lowerJetBumper
+    - middleJetBumper 
+PRPinmame:
+    # This section is specific to running the P-ROC via Pinmame.
+    
+    # keyboard:
+    #   on or off - determines whether keyboard will be enabled or not
+    #   useful in a Sys11 in early debugging
+    
+    # s11CreditDisplay and s11BallDisplay :
+    #   If using a Sys11 game prior which has a separate Ball/Credit display, you can put them on the
+    #   DMD.  If the value for a display is set to zero (or removed from YAML) it won't display.
+    #   Otherwise it's the vertical position of the display from the top.  Try 1 and 15 for a start.
+    
+    # autoPatterDetection:
+    #   on or off - by default, Pinmame will try to automatically detect patter requirements. 
+    #   there is a thread on the forum about this.  For Sys11 this should certainly be disabled,
+    #   as it does nasty things.  Likely enable for other platforms but could be useful to disable.
+
+    # doubleAlpha:
+    #   0 or 1 - set to 1 if your machine has 2 lines of 16 character alphanumeric displays.
+    #   This will adapt the code to properly handle the various display types in Sys11 machines (and a couple of WPC)
+   
+    keyboard: on
+    autoPatterDetection: off
+    s11CreditDisplay: 0
+    s11BallDisplay: 0
+    doubleAlpha: 0
+
+PRSwitches:
+    lowerRightFlipperEOS:
+        number: SF1
+    lowerRightFlipperOpto:
+        number: SF2
+        type: NC
+    lowerLeftFlipperEOS:
+        number: SF3
+    lowerLeftFlipperOpto:
+        number: SF4
+        type: NC
+    rightSpinner:
+        number: SF5
+    upperRightFlipperOpto:
+        number: SF6
+        type: NC
+    leftSpinner:
+        number: SF7
+    upperLeftFlipperOpto:
+        number: SF8
+        type: NC
+    leftCoinChute:
+        number: SD1
+    centerCoinChute:
+        number: SD2
+    rightCoinChute:
+        number: SD3
+    fourthCoinChute:
+        number: SD4
+    serviceCredits:
+        number: SD5
+    volumeDown:
+        number: SD6
+    volumeUp:
+        number: SD7
+    beginTest:
+        number: SD8
+    
+    backboxLuck:
+        number: S11
+    wireRampEnter:
+        number: S12
+    startButton:PRSwitches:
+    leftCoinSlot:
+        number: SD1
+    centerCoinSlot:
+        number: SD2
+    rightCoinSlot:
+        number: SD3
+    fourthCoinSlot:
+        number: SD4
+    fifthCoinSlot:
+        number: SD5
+    flipperLwL:
+        number: SD9
+    flipperLwR:
+        number: SD11
+
+        number: S13
+    plumbBobTilt:
+        number: S14
+    leftLoopUpper:
+        number: S15
+    topEddy:
+        number: S16
+    rightInLane:
+        number: S17
+    shooterLane:
+        number: S18
+    slamTilt:
+        number: S21
+    coinDoorClosed:
+        number: S22
+    rightLoopUpper:
+        number: S23
+    alwaysClosed:
+        number: S24
+    innerLoopLeft:
+        number: S25
+    leftInLane:
+        number: S26
+    leftOutlane:
+        number: S27
+    innerLoopRight:
+        number: S28
+    troughEject:
+        number: S31
+        type: NC
+    troughBall1:
+        number: S32
+        type: NC
+    troughBall2:
+        number: S33
+        type: NC
+    troughBall3:
+        number: S34
+        type: NC
+    troughBall4:
+        number: S35
+        type: NC
+    popperOpto:
+        number: S36
+        type: NC
+    wowTargets:
+        number: S37
+    topTargets:
+        number: S38
+    leftLane:
+        number: S41
+    ringmasterUp:
+        number: S42
+    ringmasterMiddle:
+        number: S43
+    ringmasterDown:
+        number: S44
+    leftRampMade:
+        number: S45
+    troughUpper:
+        number: S46
+    troughMiddle:
+        number: S47
+    leftLoopEnter:
+        number: S48
+    leftSlingshot:
+        number: S51
+    rightSlingshot:
+        number: S52
+    upperJetBumper:
+        number: S53
+    middleJetBumper:
+        number: S54
+    lowerJetBumper:
+        number: S55
+    skillShot:
+        number: S56
+    rightOutlane:
+        number: S57
+    ringNG:
+        number: S58
+    lightStandupTarget:
+        number: S61
+    lockStandupTarget:
+        number: S62
+    rampEnter:
+        number: S63
+    rampMagnet:
+        number: S64
+    rampMade:
+        number: S65
+    rampLockLow:
+        number: S66
+    rampLockMiddle:
+        number: S67
+    rampLockHigh:
+        number: S68
+    leftSaucer:
+        number: S71
+    rightSaucer:
+        number: S72
+    notUsed1:
+        number: S73
+    bigBallRebound:
+        number: S74
+    voltRight:
+        number: S75
+    voltLeft:
+        number: S76
+    
+PRCoils:
+    autoPlunger:
+        number: C01
+    backboxKicker:
+        number: C02
+    leftLoopMagnet:
+        number: C03
+    middleJetBumper:
+        number: C04
+    rampMagnet:
+        number: C05
+    diverterPower:
+        number: C06
+    jetUp:
+        number: C07
+    jetRelease:
+        number: C08
+    troughEject:
+        number: C09
+    leftSlingshot:
+        number: C10
+    rightSlingshot:
+        number: C11
+    upperJetBumper:
+        number: C12
+    lowerJetBumper:
+        number: C13
+    leftSaucer:
+        number: C14
+    rightSaucer:
+        number: C15
+    lockPost:
+        number: C16
+    joinFlasher:
+        number: C17
+    ring1Flasher:
+        number: C18
+    ring2Flasher:
+        number: C19
+    ring3Flasher:   
+        number: C20
+    rightPlayfieldFlasher:
+        number: C21
+    upperRightBackboxFlasher:
+        number: C21
+    motorEnable:
+        number: C22
+    jetFlasher:
+        number: C23
+    leftPlayfieldFlasher:
+        number: C24
+    upperLeftBackboxFlasher:
+        number: C24
+    upperLeftPlayfieldFlasher:
+        number: C25
+    upperRightPlayfieldFlasher:
+        number: C26
+    lowerLeftBackboxFlasher:
+        number: C26
+    ringmasterFlashers:
+        number: C27
+    lowerRightBackboxFlasher:
+        number: C28
+ 
+    lowerRightFlipper:
+        number: C29
+    lowerLeftFlipper:
+        number: C31
+    popper:
+        number: C33
+    diverterHold:
+        number: C34
+    ringmasterMagnet:
+        number: C35
+    upperPost:
+        number: C36
+
+    neon:
+        number: C33
+    notUsed:
+        number: C34
+    motorDirection:
+        number: C35
+    eddyBoard:
+        number: C36
+
+PRLamps:
+    cirqusR:
+        number: L11
+    gridTop:
+        number: L12
+    cirqusQ:
+        number: L13
+    cirqusU:
+        number: L14
+    gridTopRight:
+        number: L15
+    cirqusS:
+        number: L16
+    gridMiddleRight:
+        number: L17
+    leftJackpot:
+        number: L18
+    cirqusI:
+        number: L21
+    cirqusC:
+        number: L22
+    gridMiddleLeft:
+        number: L23
+    gridBottomLeft:
+        number: L24
+    gridBottom:
+        number: L25
+    gridMiddle:
+        number: L26
+    gridBottomRight:
+        number: L27
+    gridTopLeft:
+        number: L28
+    sideShow:
+        number: L31
+    leftLoopTop:
+        number: L32
+    leftLoop3:
+        number: L33
+    leftLoop2:
+        number: L34
+    leftLoop1:
+        number: L35
+    multiball:
+        number: L36
+    lock:
+        number: L37
+    spotMarvel:
+        number: L38
+    ringmasterLeft:
+        number: L41
+    ringmaster2:
+        number: L42
+    ringmaster3:
+        number: L43
+    ringmaster4:
+        number: L44
+    ringmasterRight:
+        number: L45
+    special:
+        number: L46
+    razz:
+        number: L47
+    frenzy:
+        number: L48
+    crankTop:
+        number: L51
+    crank2:
+        number: L52
+    crank3:
+        number: L53
+    crankBottom:
+        number: L54
+    rightLoopTop:
+        number: L55
+    rightLoop3:
+        number: L56
+    rightLoop2:
+        number: L57
+    rightLoop1:
+        number: L58
+    middleJackpot:
+        number: L61
+    rightJackpot:
+        number: L62
+    leftStandupTarget:
+        number: L63
+    lockStandupTarget:
+        number: L64
+    ringR:
+        number: L65
+    ringI:
+        number: L66
+    shootAgain:
+        number: L67
+    leftOutlane:
+        number: L68
+    wowRightWTarget:
+        number: L71
+    wowOTarget:
+        number: L72
+    wowLeftWTarget:
+        number: L73
+    ringN:
+        number: L74
+    ringG:
+        number: L75
+    rightOutlane:
+        number: L76
+    leftInlane:
+        number: L77
+    skillRing:
+        number: L78
+    extraBall:
+        number: L81
+    topJetBumper:
+        number: L82
+    middleJetBumper:
+        number: L83
+    lowerJetBumper:
+        number: L84
+    rightInlane:
+        number: L85
+    voltLeft:
+        number: L86
+    voltRight:
+        number: L87
+    startButton:
+        number: L88
+
+
+
+
+
