@@ -82,6 +82,7 @@ PRSwitches:
     upperLeftFlipperOpto:
         number: SF8
         type: NC
+
     leftCoinChute:
         number: SD1
     centerCoinChute:
@@ -98,27 +99,12 @@ PRSwitches:
         number: SD7
     beginTest:
         number: SD8
-    
+
     backboxLuck:
         number: S11
     wireRampEnter:
         number: S12
-    startButton:PRSwitches:
-    leftCoinSlot:
-        number: SD1
-    centerCoinSlot:
-        number: SD2
-    rightCoinSlot:
-        number: SD3
-    fourthCoinSlot:
-        number: SD4
-    fifthCoinSlot:
-        number: SD5
-    flipperLwL:
-        number: SD9
-    flipperLwR:
-        number: SD11
-
+    startButton:
         number: S13
     plumbBobTilt:
         number: S14
@@ -444,8 +430,5 @@ PRLamps:
         number: L87
     startButton:
         number: L88
-
-
-
 
 
