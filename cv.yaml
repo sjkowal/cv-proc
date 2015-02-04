@@ -55,7 +55,7 @@ PRPinmame:
     #   0 or 1 - set to 1 if your machine has 2 lines of 16 character alphanumeric displays.
     #   This will adapt the code to properly handle the various display types in Sys11 machines (and a couple of WPC)
    
-    keyboard: on
+    keyboard: off 
     autoPatterDetection: off
     s11CreditDisplay: 0
     s11BallDisplay: 0
@@ -64,12 +64,12 @@ PRPinmame:
 PRSwitches:
     lowerRightFlipperEOS:
         number: SF1
-    lowerRightFlipperOpto:
+    lowerRightFlipper:
         number: SF2
         type: NC
     lowerLeftFlipperEOS:
         number: SF3
-    lowerLeftFlipperOpto:
+    lowerLeftFlipper:
         number: SF4
         type: NC
     rightSpinner:
@@ -279,9 +279,9 @@ PRCoils:
     lowerRightBackboxFlasher:
         number: C28
  
-    lowerRightFlipper:
+    lowerRightFlipperMain:
         number: C29
-    lowerLeftFlipper:
+    lowerLeftFlipperMain:
         number: C31
     popper:
         number: C33
